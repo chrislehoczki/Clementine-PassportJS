@@ -11,6 +11,9 @@ module.exports = function (app, db) { //allow this to be exported
             res.sendFile(process.cwd() + '/public/index.html');
         });
 
-   app.route('/api/clicks') //route 2 - run getClicks functions within clickHandler
-        .get(clickHandler.getClicks);
+        
+        app.route('/api/clicks') //run functions to update db
+        .get(clickHandler.getClicks)
+        .post(clickHandler.addClick)
+        .delete(clickHandler.resetClicks);
 };
