@@ -13,7 +13,7 @@ module.exports = function (app, db) { //allow this to be exported
 
         
         app.route('/api/clicks') //run functions to update db
-        .get(clickHandler.getClicks)
-        .post(clickHandler.addClick)
-        .delete(clickHandler.resetClicks);
+        .get(clickHandler.getClicks) //get request returns click number
+        .post(clickHandler.addClick) //post request adds click
+        .delete(clickHandler.resetClicks); // delete request resets clicks
 };
