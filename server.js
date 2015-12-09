@@ -6,7 +6,6 @@ var express = require('express'),
 
 var app = express();
 
-routes(app);
 
 mongo.connect('mongodb://localhost:27017/clementinejs', function (err, db) { //wraps all simple code in this function
 //port - default, clementinejs is database want to use, if not created yet, it will be created
